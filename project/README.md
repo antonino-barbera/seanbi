@@ -11,7 +11,7 @@ Patents dataset - we will use the patents dataset from http://www.patentsview.or
 
 An example of a API call using the GET method:
 
-*```http://www.patentsview.org/api/patents/query?q={"_gte":{"patent_date":"2007-01-04"}}&f=["patent_number","patent_date"]```
+```http://www.patentsview.org/api/patents/query?q={"_gte":{"patent_date":"2007-01-04"}}&f=["patent_number","patent_date"]```
 
 This will return all patent numbers and patent dates after 2007-01-04
 
