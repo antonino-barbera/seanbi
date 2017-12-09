@@ -1,5 +1,3 @@
-## Data analysis
-
 Now let's look at our dataset in more detailed way and try to answer some interesting questions.
 * **Is there a trend for the number of patent grants during the years?**
 
