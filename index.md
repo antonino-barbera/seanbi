@@ -1,4 +1,4 @@
-We will analyse data which comprise detail information on almost 3 million U.S. patents granted between January 1963 and December 1999. The patent dataset is maintained by the National Bureau of Economic Research (NBER). Data can be downloaded at the following link: http://www.nber.org/patents/
+We will analyse data which comprise detail information on almost 3 million U.S. patents granted between January 1963 and December 1999. The patent dataset is maintained by the National Bureau of Economic Research (NBER). Data can be downloaded from the following [link](http://www.nber.org/patents/).
 
 By using number of references to individual patent, we’ll evaluate each patent’s influence. Then, we can do exploratory analysis on dataset and our evaluations to find general trends. We will try to visualize the data as much possible and answer some interesting questions.
 
