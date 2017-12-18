@@ -128,6 +128,8 @@ The next graph is showing Swiss patents from year 1998 which are cited by patent
   </div>
 </body>
 
+
+
 * **Are the citations made and the citations received increasing with passing of the years?**
 
 ![png](index_files/index_92_1.png)
@@ -152,6 +154,7 @@ We use the variable "CAT", which inform about the macro category of the patent. 
     Elec
     Mechanic
     Other
+
 The category "other" includes Textile, Heating, Food and other miscellaneous.
 
 ![png](index_files/index_99_1.png)
@@ -184,7 +187,6 @@ The number of citations each patent recieved isn't good method to evaluate acade
 
 
 
-</div>
 <style>
     .dataframe thead tr:only-child th {
         text-align: right;
@@ -239,7 +241,6 @@ The number of citations each patent recieved isn't good method to evaluate acade
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
