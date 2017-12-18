@@ -128,4 +128,264 @@ The next graph is showing Swiss patents from year 1998 which are cited by patent
   </div>
 </body>
 
+* **Are the citations made and the citations received increasing with passing of the years?**
 
+![png](index_files/index_92_1.png)
+
+We can see that the citations made are missing for years before 1975. The citations received decrease linearly the last 10 years, this makes sense because a new patent is less likely to have many citations.
+
+So far we showed the absolute numbers, but would make more sense to analyse for each year the citations relative to the total number of patents granted in that year.
+
+![png](index_files/index_95_1.png)
+
+
+We can still notice an increase in the citations both made and received over time, probably because of the globalization and the world wide web, which made easier to access information from all over the world.
+The citations received 
+
+* **How does the number of citations relate to the category of the patent?**
+
+We use the variable "CAT", which inform about the macro category of the patent. There are 6 classes:
+
+    Chemical
+    CS
+    Medical
+    Elec
+    Mechanic
+    Other
+The category "other" includes Textile, Heating, Food and other miscellaneous.
+
+![png](index_files/index_99_1.png)
+
+
+As before, for a more meaningful visualization is better to divide for the total number of patents that a category has.
+
+![png](index_files/index_101_1.png)
+
+
+The bar plot shows that patents in Computer Science and Medicine are more cited and make more citations as well. The citations received are always less for the contribute of the novel patents that we showed before.
+
+* **Displaying citations flows among categories of patents over time**
+
+#todo: plot
+
+## The impact criteria
+
+   The number of patents and their quality is important index of country's innovation and economic growth. However, according to our dataset, the total number of patents granted by only US Patent and Trademark Office (USPTO) from 1963 to 1999 is almost 3 million. In other words, over 200 patents were granted per day, and it's increasing over time. Such exponential growth raises important questions like "How can one measure patent's quality", "How to distinguish high quality patents" and "Is it possible to predict, if patent is good or bad". By answering to those questions, both researchers and business companies can benefit and save huge amount of assets and time.
+
+   In this section, we will try to measure both economical and academic impacts of each patents and try to find if there is any correlation or interesting relationship between them. In order to do that, we have used NBER patents dataset and fortune rankings list from 1963 to 1999
+
+### Defining Academic Impact
+
+According to the https://www.nap.edu/read/5976/chapter/7, the number of patents issued and the technical and scientific literature citations on the patents can be used to develop quantitative measures of innovative output and science-technology linkages. Thus, to measure academic impact of each patent, we have used number of citations it has recieved using citations dataset. Even though our citation dataset contains only informations related from 1975 to 1999, there is over 16 millioin citation relationships between patents.
+
+
+The number of citations each patent recieved isn't good method to evaluate academic impact. Because, the patent which influenced another patent which has recieved huge amount of citations, might have bigger impact, but number of citations alone can't represent such cases. So, we have measured second layer of citations, which is the number of citations of each citing patents recieved for given patent.
+
+
+
+
+</div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>first</th>
+      <th>second</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>2</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>1</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>1</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>2</td>
+      <td>3.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+The table above is the final result of our method.
+
+* **What features influence on academic qualities of patents?**
+In order to answer this question, we have used Pearson Correlation Coefficient with 2 columns of "academic" dataset and 23 features in patents dataset. This coefficient will tell us is there linear relationship between 2 series, and if yes is it negative or positive. https://en.wikipedia.org/wiki/Pearson_correlation_coefficient . 
+
+
+![png](index_files/index_123_0.png)
+
+
+According to the graph the academic impact of each patents are decreasing as time passes, which can be explained by increasing number of patents in each year. As expected, the CRECIEVE feature, which is number of citations recieved has highest correllation. But also note that it's value is 0.811 with second column of ACADEMIC dataset. And also, the generality which is measurement of how much scientific area does patent cover, has quite high correlation. In other words, the patents which covers wide area, have that much influence academically.
+
+
+### Defining Economic Impact
+
+The dataset provided by NBER doesn't have any information related to economy except the company names of each patents are assigned to. Thus, in this section, we have scraped Fortune magazine's rankings of top 500 companies in US over 1963 to 1999, with their revenues and profits in million (http://archive.fortune.com/magazines/fortune/fortune500_archive/full/). By combining these 2 datasets, we can get patents information of each company owns and their economic measurements for given year.
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>company</th>
+      <th>profit</th>
+      <th>rank</th>
+      <th>revenue</th>
+      <th>year</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>General Motors</td>
+      <td>1459.1</td>
+      <td>1</td>
+      <td>14640.2</td>
+      <td>1963</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Exxon Mobil</td>
+      <td>840.9</td>
+      <td>2</td>
+      <td>9536.9</td>
+      <td>1963</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Ford Motor</td>
+      <td>480.7</td>
+      <td>3</td>
+      <td>8089.6</td>
+      <td>1963</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>General Electric</td>
+      <td>265.8</td>
+      <td>4</td>
+      <td>4792.7</td>
+      <td>1963</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Mobil</td>
+      <td>242.3</td>
+      <td>5</td>
+      <td>3933.3</td>
+      <td>1963</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+The table above shows top 5 companies in US over 1963 to 1999.
+
+We checked how much patents these top companies own and surprisingly almost 17% of the total patents is owned by only 1564 top groups. Moreover, it is only 3% of the companies that were mentioned in the PATENTS dataset.
+
+### What features influence on economic impact of patents?
+In order to answer this question, we have used the similar method as academic.
+
+
+![png](index_files/index_145_1.png)
+
+
+Obviously, the Assignee id has the highest correlation with revenues and profits. For the features related to time, we can see the same relationship with Academic correlations. Which also can be explained increasing number of patents. However, the inventor's country plays big impact on economic impact, which is different from academics. And also, the number of claims each patent has negative influence on economics, while it was opposite in academics. But we can see interesting results in citation related features. For example, the number of citations made and originality of patent influence negatively in economy. And citations recieved has some degree of correlation (0.045).
+
+### The Comparison between Academic and Economic impacts
+Now, since we have evaluated quantative measurements of both academic and economical impacts, let's see their relationships. To do so, we first calculated total number of citations of each company's patents has and the compared it with it's revenue and profits using pair plot and correlation matrix
+
+
+![png](index_files/index_149_0.png)
+
+
+The highest relation between academic and economic feature was shown in "second" in ACADEMIC and company's revenues. However, the correlation is still low and it might seem there is no correlation between academic and economic impact. But note that, this analysis is time independent and we have no knowledge about citations of patents that companies already had before 1975.
+
+### The Comparison between Academic and Economic impacts with TIME
+
+In this section, we are dividing the previous analysis on each year. Note that instead of number of citations of each year, we took cumulative sum. The reason is, we also have to take account that given company has already owned previous patents, influencing company's success. And also, we have used column "second" in ACADEMIC dataset for measuring academic impact, since it has considerably large correlation with "first" column.
+
+
+!!!GRAPH DESCRIPTION
+
+
+![png](index_files/index_158_0.png)
+
+
+In general the correlation now is pretty high and showing clear evidence that ACADEMIC impact indead influence on ECONOMY. But interestengly, this graph might be inferring some historical events. For example around early 1980, there was global economical recession happened and it was ended around 1984. And also, through 1989 to 1991, due to inconvenient government policy economical recession happened. However the 1990 to 2000 is considered the golden years of US economy and in 1994 the number of jobs created were peaked. https://en.wikipedia.org/wiki/1990s_United_States_boom, https://en.wikipedia.org/wiki/List_of_recessions_in_the_United_States. Even though it is tempting to say that economic and academic relationship is somehow related to nations economical state and policy, further research and expertise are needed.
+
+### Can we predict Academic and Impact?
+According to the correlation analysis on these two impact, the features provided to us is not sufficient for building reliable prediction model. But we are trying it anyway. To predict how many citations do patents can have we have used Random Forest Regression for our model and mean absolute error to evaluate our model.
+
+
+### Citation lag
+The forward lags focus on the time difference between the application or grant year of the cited patent, and that of the citing patents. And thus, we can measure probability of recieving citation since the grant.
+
+
+![png](index_files/index_165_0.png)
+
+
+
+![png](index_files/index_166_0.png)
+
+
+According to our graph, almost 40 % of the total citations were made within 5 years since the grant, and 80 % after 13 years.
