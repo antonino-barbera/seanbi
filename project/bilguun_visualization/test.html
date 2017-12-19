@@ -82,55 +82,43 @@ path.lineTrajectory {
   stroke-width: 4;
 }
 </style>
-
-<h1>Relationship between academic and economical impact of patents</h1>
-
-<div id="chart" style="margin:0px"></div>
-<table id="more_info">
-  <tr>
-    <th>Name</th>
-    <th>Value</th>
-  </tr>
-  <tr>
-    <td>Company Name</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Total number of patents</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Total number of citations to patents</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Company revenue</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Company main field</td>
-    <td></td>
-  </tr>
-</table>
-<span id="min-time">1975</span> 
-<input type="range" name="points" min="0" max="24" step="1" value="0" id="slider-time" style="width:900px">
-<span id="max-time">1999</span>
-<br>
-<p>
-Original creation by <a href="http://www.gapminder.org/world/">Gapminder</a> using <a href="https://github.com/RandomEtc/mind-gapper-js">Tom Carden</a> JavaScript version.<br>
-Recreation by <a href="http://bost.ocks.org/mike/nations/">Mike Bostock</a> with <a href="http://d3js.org/">D3.js</a>.<br>
-Re-Recreation using <a href="http://romsson.github.io/dragit/">dragit.js</a> by <a href="http://romain.vuillemot.net/">Romain Vuillemot</a> (view <a href="https://github.com/romsson/dragit/blob/master/example/nations.html">source</a> on GitHub).
-
-<div class="twitter-share-container">
-  <a href="https://twitter.com/share" class="twitter-share-button" data-via="romsson" data-url="http://romsson.github.io/dragit/example/nations.html">Tweet</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-</div></p>
-
-<!-- Place this tag in your head or just before your close body tag. -->
-<script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
-
-<!-- Place this tag where you want the share button to render. -->
-<div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://romsson.github.io/dragit/example/nations.html"></div>
+<body>
+  <h1>Relationship between academic and economical impact of patents</h1>
+  <div style="float:left; width:19%;  margin-right:10px;">
+    <table id="more_info">
+      <tr>
+        <th>Name</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>Company Name</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Number of patents</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Number of citations</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Company revenue</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Company main field</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+  <div style="float:left; width:80%;">
+    <div id="chart" style="margin:0px"></div>
+    <span id="min-time">1975</span> 
+    <input type="range" name="points" min="0" max="24" step="1" value="0" id="slider-time" style="width:900px">
+    <span id="max-time">1999</span>
+  </div>
+</body>
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -165,8 +153,8 @@ var margin = {top: 19.5, right: 19.5, bottom: 19.5, left: 39.5},
     width = 960 - margin.right,
     height = 500 - margin.top - margin.bottom;
 // Various scales. These domains make assumptions of data, naturally.
-var xScale = d3.scale.log().domain([1, 2e5]).range([0, width]),
-    yScale = d3.scale.log().domain([2e2 , 2e5]).range([height, 0]),
+var xScale = d3.scale.log().domain([40, 1.2e6]).range([0, width]),
+    yScale = d3.scale.log().domain([2e2 , 3e5]).range([height, 0]),
     radiusScale = d3.scale.sqrt().domain([1, 1e4]).range([0, 20]),
     colorScale = d3.scale.category10();
 // The x & y axes.
@@ -219,6 +207,9 @@ var countrylabel = svg.append("text")
     .text(" ");
 var first_time = true;
 // Load the data.
+d3.json("relationship.txt", function(rels){
+  
+})
 d3.json("patentImpact.txt", function(nations) {
   // A bisector since many nation's data is sparsely-defined.
   var bisect = d3.bisector(function(d) { return d[0]; });
@@ -345,26 +336,6 @@ function clear_demo() {
     dragit.trajectory.removeAll();
     d3.selectAll(".dot").style("opacity", 1)
   }
-}
-function play_demo() {
-  var ex_nations = ["China", "India", "Indonesia", "Italy", "France", "Spain", "Germany", "United States"]
-  var index_random_nation = null;
-  var random_index = Math.floor(Math.random() * ex_nations.length);
-  var random_nation = nations.filter(function(d, i) { 
-    if(d.name == ex_nations[random_index]) {
-      index_random_nation = i;
-      return true;
-    }
-  })[0];
-  var random_nation = nations[index_random_nation];
-  dragit.trajectory.removeAll();
-  dragit.trajectory.display(random_nation, index_random_nation);
-  countrylabel.text(random_nation.name);
-  dragit.utils.animateTrajectory(dragit.lineTrajectory, dragit.time.min, 2000)
-  d3.selectAll(".dot").style("opacity", .4)
-  d3.selectAll(".dot").filter(function(d) {
-    return d.name == random_nation.name;
-  }).style("opacity", 1)
 }
 var demo_interval = null;
 setTimeout(function() {
