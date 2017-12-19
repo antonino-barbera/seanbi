@@ -482,7 +482,7 @@ path.lineTrajectory {
     </table>
   </div>
   <div style="float:left; width:80%;">
-    <div id="chart" style="margin:0px; left=-50px"></div>
+    <div id="chart" style="position: absolute; left=-50px"></div>
     <span id="min-time">1975</span> 
     <input type="range" name="points" min="0" max="24" step="1" value="0" id="slider-time" style="width:900px">
     <span id="max-time">1999</span>
