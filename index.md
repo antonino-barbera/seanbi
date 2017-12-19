@@ -747,7 +747,7 @@ The forward lags focus on the time difference between the application or grant y
 
 According to our graph, almost 40 % of the total citations were made within 5 years since the grant, and 80 % after 13 years.
 
-*Conclusion*
+**Conclusion**
 
 With this work we first analysed almost 3 million patents granted in US from 1963 to 1999, their citations from 1975 to 1999 and then tried to answer questions relating to their impacts. 
 
