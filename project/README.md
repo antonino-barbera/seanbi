@@ -33,11 +33,5 @@ The data are in 5 zipped ASCII CSV files as follows:
 Each of these files has a corresponding "txt" file that contains the variable names and other documentation. The whole dataset is more analysed in notebook.
 
 
-## A list of internal milestones up until project milestone 2
-* Nov. 11, 2017 - Get comfortable using the API, getting the needed data and trying to answer some of the questions and make some demo plots.
-* Nov. 21, 2017 - We should have answered all of the questions and try to find a way to answer how "famous" a patent is. 
+## Contributions
 
-## Questions for TAa
-* Does the focus need to be only on citations or we can study general caratheristics on the patents?
-* Should we also use the dataset provided at http://snap.stanford.edu/data/cit-Patents.html and should we somehow combine the 2 datasets?
-* Does it make sense to create a machine learning system to predict how cited a patent is going to be?
