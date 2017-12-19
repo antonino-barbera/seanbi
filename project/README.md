@@ -34,4 +34,8 @@ Each of these files has a corresponding "txt" file that contains the variable na
 
 
 ## Contributions
+Antonino Barbera: Dataset analysis, answered some questions in patents part and some questions in patent citations part.
+Bilguun Chinzorig: The impact criteria part, answered some questions in patents part and some questions in patent citations part.
+Sebastijan Stevanovic: Created data story, answered some questions in patents part and some questions in patent citations part. Will work on the final presentation poster.
 
+Antonino Barbera or Bilguun Chinzorig will present project during the final presentation. 
