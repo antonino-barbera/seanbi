@@ -206,11 +206,8 @@ var countrylabel = svg.append("text")
     .attr("x", 20)
     .text(" ");
 var first_time = true;
-// Load the data.
-d3.json("relationship.txt", function(rels){
-  
-})
-d3.json("patentImpact.txt", function(nations) {
+
+d3.json("patentImpact.sebastian", function(nations) {
   // A bisector since many nation's data is sparsely-defined.
   var bisect = d3.bisector(function(d) { return d[0]; });
   console.log(nations)
