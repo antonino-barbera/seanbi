@@ -55,8 +55,6 @@ The next graph is showing Swiss patents from year 1998 which are cited by patent
 <head><meta charset="utf-8" />
 <title>graph2</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="custom.css">
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
