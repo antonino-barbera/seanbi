@@ -731,9 +731,6 @@ setTimeout(function() {
 
 In general the correlation now is pretty high and showing clear evidence that ACADEMIC impact indead influence on ECONOMY. But interestengly, this graph might be inferring some historical events. For example around early 1980, there was global economical recession happened and it was ended around 1984. And also, through 1989 to 1991, due to inconvenient government policy economical recession happened. However the 1990 to 2000 is considered the golden years of US economy and in 1994 the number of jobs created were peaked. https://en.wikipedia.org/wiki/1990s_United_States_boom, https://en.wikipedia.org/wiki/List_of_recessions_in_the_United_States. Even though it is tempting to say that economic and academic relationship is somehow related to nations economical state and policy, further research and expertise are needed.
 
-### Can we predict Academic and Impact?
-According to the correlation analysis on these two impact, the features provided to us is not sufficient for building reliable prediction model. But we are trying it anyway. To predict how many citations do patents can have we have used Random Forest Regression for our model and mean absolute error to evaluate our model.
-
 
 ### Citation lag
 The forward lags focus on the time difference between the application or grant year of the cited patent, and that of the citing patents. And thus, we can measure probability of recieving citation since the grant.
