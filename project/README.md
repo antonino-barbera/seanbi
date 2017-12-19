@@ -24,11 +24,11 @@ We will also try to answer the question:
 The patent dataset is maintained by the National Bureau of Economic Research (NBER). We downloaded them at the following link: http://www.nber.org/patents/
 
 The data are in 5 zipped ASCII CSV files as follows:
-Pat63_99.zip contains the patent data, including the constructed variables
-Coname.zip contains the assignee names.
-Match.zip contains the match to CUSIP numbers
-Inventor.zip contains the individual inventor records
-Cite75_99.zip contains the pairwise citations data, between 1975 and 1999.
+* Pat63_99.zip contains the patent data, including the constructed variables
+* Coname.zip contains the assignee names.
+* Match.zip contains the match to CUSIP numbers
+* Inventor.zip contains the individual inventor records
+* Cite75_99.zip contains the pairwise citations data, between 1975 and 1999.
 Each of these files has a corresponding "txt" file that contains the variable names and other documentation.
 
 
