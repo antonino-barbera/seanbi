@@ -1,6 +1,15 @@
-We will analyse data which comprise detail information on almost 3 million U.S. patents granted between January 1963 and December 1999. The patent dataset is maintained by the National Bureau of Economic Research (NBER). Data can be downloaded from the following [link](http://www.nber.org/patents/).
+Are you planning to file a patent application?
 
-By using number of references to individual patent, we’ll evaluate each patent’s influence. Then, we can do exploratory analysis on dataset and our evaluations to find general trends. We will try to visualize the data as much possible and answer some interesting questions.
+Don’t forget to add citations!
+
+When a new patent is filed, the inventor references the existing prior art, and
+demonstrates how the new invention represents an advance over this prior art.
+It may look boring to do, but numerous validation studies have revealed the existence of a strong positive relationship between citations and technological importance.
+However, the nature of this impact is not explicitly clarified in these previous studies, so we tried to do it as a true data scientist would!
+
+We will analyse the data which comprise detailed information on almost 3 million U.S. patents granted between January 1963 and December 1999. The patent dataset is maintained by the National Bureau of Economic Research (NBER). We downloaded them at the following “link”.
+
+At first we will do exploratory analysis on the dataset, trying to find some general trends and answering some insightful questions. We will end up using a mix of variables to evaluate each patent’s influence both on the academic and economical side.
 
 * **Is there a trend for the number of patent grants during the years?**
 
@@ -21,7 +30,7 @@ The map shows number of patents by country of origin for patents from year 1998.
 As expected, United States are in the first place with 80291 registered patents, and they even have more patents than all other countries together. In second place is Japan with 30840 patents and then is Germany with 9095 patents. From the results we can see that the patents are unevenly distributed, there are only three countries with more than 9000 patents, and only one country with more than 50000 registered patents. All other countries have less than 4000 registered patents during the year 1998.
 
 
-* **What are the most popular technology fields for patents assigned in the last 5 years?**
+* **What are the most popular technology fields for patents through the years?**
 
 In this section, we are interested in changes in number of patents in each technology field thorough the years. 
 
