@@ -29,7 +29,8 @@ The data are in 5 zipped ASCII CSV files as follows:
 * Match.zip contains the match to CUSIP numbers
 * Inventor.zip contains the individual inventor records
 * Cite75_99.zip contains the pairwise citations data, between 1975 and 1999.
-Each of these files has a corresponding "txt" file that contains the variable names and other documentation.
+
+Each of these files has a corresponding "txt" file that contains the variable names and other documentation. The whole dataset is more analysed in notebook.
 
 
 ## A list of internal milestones up until project milestone 2
