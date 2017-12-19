@@ -95,7 +95,7 @@ The next graph is showing Swiss patents from year 1998 which are cited by patent
 
 
 <div class="output_html rendered_html output_subarea ">
-<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']}});if(!window.Plotly) {require(['plotly'],function(plotly) {{window.Plotly=plotly;}}</script>
+<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']}});if(!window.Plotly) {require(['plotly'],function(plotly) {{window.Plotly=plotly;}})}</script>
 </div>
 
 </div>
