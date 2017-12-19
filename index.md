@@ -454,7 +454,7 @@ path.lineTrajectory {
 <body>
   <h1>Relationship between academic and economical impact of patents</h1>
   <div style="position: relative; left: -200px;">
-  <div style="position: absolute; left:0; float:left; width:19%;  margin-right:10px;">
+  <div style="position: absolute; left:-200px; float:left; width:19%;  margin-right:10px;">
     <table id="more_info">
       <tr>
         <th>Name</th>
