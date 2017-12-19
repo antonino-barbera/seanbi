@@ -747,3 +747,13 @@ The forward lags focus on the time difference between the application or grant y
 
 
 According to our graph, almost 40 % of the total citations were made within 5 years since the grant, and 80 % after 13 years.
+
+With this work we first analysed almost 3 million patents granted in US from 1963 to 1999, their citations from 1975 to 1999 and then tried to answer questions relating to their impacts. 
+
+From patent and citation analysis, we have reached following conclusions:
+1. Number of patents increasing exponentially
+2. Japan, Germany and some European country’s companies own high number of US patents
+3. Computer Science and Medical fields has grown significantly
+4. Most of the citations are made 5 years after the grant etc.
+
+For the final part, since patents can have both economical and academical impact, we studied both impacts and their relationship. The academic impact can be measured by number of citations each patents received, but we couldn’t measure economical one with NBER data only. Thus we have scrapped Fortune 500 rankings from 1963 to 1999, and used each company’s economical characteristics. Once, we defined a way to evaluate impact, we have analysed correlation between each given features of patent. We observed some interesting relations, but our result implies our given features are not enough for building prediction model. However, there is positive relationship between academic and economic impacts.
