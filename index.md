@@ -453,40 +453,42 @@ path.lineTrajectory {
 </style>
 <body>
   <h1>Relationship between academic and economical impact of patents</h1>
-  <div style="float:left; width:19%;  margin-right:10px;">
-    <table id="more_info">
-      <tr>
-        <th>Name</th>
-        <th>Value</th>
-      </tr>
-      <tr>
-        <td>Company Name</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Number of patents</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Number of citations</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Company revenue</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Company main field</td>
-        <td></td>
-      </tr>
-    </table>
-  </div>
-  <div style="float:left; width:80%;">
-    <div id="chart" style="position: relative; left: -200px;"></div>
-    <span id="min-time">1975</span> 
-    <input type="range" name="points" min="0" max="24" step="1" value="0" id="slider-time" style="width:900px">
-    <span id="max-time">1999</span>
-  </div>
+  <div>
+    <div style="float:left; width:19%;  margin-right:10px;">
+      <table id="more_info">
+        <tr>
+          <th>Name</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>Company Name</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Number of patents</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Number of citations</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Company revenue</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Company main field</td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div style="float:left; width:80%;">
+      <div id="chart" style="position: relative; left: -200px;"></div>
+      <span id="min-time">1975</span> 
+      <input type="range" name="points" min="0" max="24" step="1" value="0" id="slider-time" style="width:900px">
+      <span id="max-time">1999</span>
+    </div>
+   </div> 
 </body>
 
 <div id="fb-root"></div>
