@@ -168,7 +168,6 @@ So far we showed the absolute numbers, but would make more sense to analyse for 
 
 
 We can still notice an increase in the citations both made and received over time, probably because of the globalization and the world wide web, which made easier to access information from all over the world.
-The citations received 
 
 * **How does the number of citations relate to the category of the patent?**
 
